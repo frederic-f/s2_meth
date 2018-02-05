@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+
+
+struct article
+{
+  int numero; // numero qui identifie l article 
+  char nom[20];
+  int qte_stock; // quantite disponible en stock
+  float prix; //
+};
+typedef struct article article ;
+
+
+
+void saisieArticle(article *art) { // je recupere l' article qui se trouve a l' adresse
+  article tmp;
+  tmp = *art;
+
+
+  printf("Function: %d\n", (*art).numero);
+  printf("Function: %s\n", (*art).nom);
+  
+
+  // modif le numero
+  (*art).numero = 13;
+  // modif de la chaine de caractere
+  strcpy((*art).nom, "zee Frenchies!");
+
+  printf("Function: %d\n", (*art).numero);
+  printf("Function: %s\n", (*art).nom);
+}
+
+
+
+int main() {
+  article art;
+
+  art.numero = 3;
+  strcpy(art.nom, "Zee germans");
+
+  printf("Main: %d\n", art.numero);
+  printf("Main: %s\n", art.nom);
+
+  //int i = 3;
+  //int *p;
+  //p = &i;
+  // printf("*p = %d \n",*p);
+
+  saisieArticle(&art); // je passe l'adresse de mon article
+
+}
