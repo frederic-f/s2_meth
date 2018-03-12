@@ -1,0 +1,3 @@
+pstree -p | grep exo2_zombie
+
+pid de l'executable : 24108
