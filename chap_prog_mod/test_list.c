@@ -13,7 +13,7 @@
 #define N2 -20
 
 /* Test that an empty list is indeed empty. */
-void test_empty_list_is_empty (void)
+void test_empty_list_is_empty(void)
 {
   /* done */
 
